@@ -9,6 +9,8 @@ import UIKit
 
 class CumleHucreTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var sentenceTurkishLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

@@ -9,21 +9,29 @@ import UIKit
 
 class CumleEkleViewController: UIViewController {
 
+    @IBOutlet weak var sentenceEnglish: UITextView!
+    @IBOutlet weak var sentenceGerman: UITextView!
+    @IBOutlet weak var sentenceGermanV2: UITextView!
+    @IBOutlet weak var sentenceTurkish: UITextView!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+    
+        
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func add(_ sender: Any) {
+        
+        if let sentenceTurkish = sentenceTurkish.text, let sentenceEnglish = sentenceEnglish.text, let sentenceGerman = sentenceGerman.text, let sentenceGermanV2 = sentenceGermanV2.text {
+            
+            Sentencesdao().addSentence(sentence_turkish: sentenceTurkish, sentence_english: sentenceEnglish, sentence_german: sentenceGerman, sentence_germanv2: sentenceGermanV2)
+            
+        }
+        
     }
-    */
-
+    
 }

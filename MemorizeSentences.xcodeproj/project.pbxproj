@@ -16,6 +16,22 @@
 		8E60A21728A638E6002139E4 /* MemorizeSentencesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A21628A638E6002139E4 /* MemorizeSentencesTests.swift */; };
 		8E60A22128A638E6002139E4 /* MemorizeSentencesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A22028A638E6002139E4 /* MemorizeSentencesUITests.swift */; };
 		8E60A22328A638E6002139E4 /* MemorizeSentencesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A22228A638E6002139E4 /* MemorizeSentencesUITestsLaunchTests.swift */; };
+		8E60A23028A63D48002139E4 /* CumleHucreTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A22F28A63D48002139E4 /* CumleHucreTableViewCell.swift */; };
+		8E60A23228A63E53002139E4 /* CumleListeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A23128A63E53002139E4 /* CumleListeViewController.swift */; };
+		8E60A23428A64870002139E4 /* CumleEkleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A23328A64870002139E4 /* CumleEkleViewController.swift */; };
+		8E60A23628A64899002139E4 /* CumleGuncelleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A23528A64899002139E4 /* CumleGuncelleViewController.swift */; };
+		8E60A23828A648C1002139E4 /* CumleDetayViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A23728A648C1002139E4 /* CumleDetayViewController.swift */; };
+		8E60A23C28A68864002139E4 /* Sentence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A23B28A68864002139E4 /* Sentence.swift */; };
+		8E60A23E28A6897E002139E4 /* Sentencesdao.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A23D28A6897D002139E4 /* Sentencesdao.swift */; };
+		8E60A24128A689E6002139E4 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 8E60A24028A689BF002139E4 /* libsqlite3.tbd */; };
+		8E60A24E28A68A51002139E4 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A24328A68A51002139E4 /* FMDatabaseAdditions.m */; };
+		8E60A24F28A68A51002139E4 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A24428A68A51002139E4 /* FMDatabaseQueue.m */; };
+		8E60A25028A68A51002139E4 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A24528A68A51002139E4 /* FMResultSet.m */; };
+		8E60A25128A68A51002139E4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A24C28A68A51002139E4 /* FMDatabase.m */; };
+		8E60A25228A68A51002139E4 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A24D28A68A51002139E4 /* FMDatabasePool.m */; };
+		8E60A25428A68AB8002139E4 /* sentences.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8E60A25328A68AB8002139E4 /* sentences.sqlite */; };
+		8EFBB18628AA20BE00DE688C /* UnMemorisedSentencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB18528AA20BE00DE688C /* UnMemorisedSentencesViewController.swift */; };
+		8EFBB18A28AA622000DE688C /* MemorisedSentencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB18928AA622000DE688C /* MemorisedSentencesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +65,29 @@
 		8E60A21C28A638E6002139E4 /* MemorizeSentencesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MemorizeSentencesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8E60A22028A638E6002139E4 /* MemorizeSentencesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeSentencesUITests.swift; sourceTree = "<group>"; };
 		8E60A22228A638E6002139E4 /* MemorizeSentencesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorizeSentencesUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8E60A22F28A63D48002139E4 /* CumleHucreTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumleHucreTableViewCell.swift; sourceTree = "<group>"; };
+		8E60A23128A63E53002139E4 /* CumleListeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumleListeViewController.swift; sourceTree = "<group>"; };
+		8E60A23328A64870002139E4 /* CumleEkleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumleEkleViewController.swift; sourceTree = "<group>"; };
+		8E60A23528A64899002139E4 /* CumleGuncelleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumleGuncelleViewController.swift; sourceTree = "<group>"; };
+		8E60A23728A648C1002139E4 /* CumleDetayViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CumleDetayViewController.swift; sourceTree = "<group>"; };
+		8E60A23B28A68864002139E4 /* Sentence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentence.swift; sourceTree = "<group>"; };
+		8E60A23D28A6897D002139E4 /* Sentencesdao.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sentencesdao.swift; sourceTree = "<group>"; };
+		8E60A24028A689BF002139E4 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		8E60A24228A68A50002139E4 /* MemorizeSentences-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MemorizeSentences-Bridging-Header.h"; sourceTree = "<group>"; };
+		8E60A24328A68A51002139E4 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		8E60A24428A68A51002139E4 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		8E60A24528A68A51002139E4 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		8E60A24628A68A51002139E4 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		8E60A24728A68A51002139E4 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		8E60A24828A68A51002139E4 /* FMDB.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDB.h; sourceTree = "<group>"; };
+		8E60A24928A68A51002139E4 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		8E60A24A28A68A51002139E4 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		8E60A24B28A68A51002139E4 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		8E60A24C28A68A51002139E4 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		8E60A24D28A68A51002139E4 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		8E60A25328A68AB8002139E4 /* sentences.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = sentences.sqlite; sourceTree = "<group>"; };
+		8EFBB18528AA20BE00DE688C /* UnMemorisedSentencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnMemorisedSentencesViewController.swift; sourceTree = "<group>"; };
+		8EFBB18928AA622000DE688C /* MemorisedSentencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorisedSentencesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +95,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E60A24128A689E6002139E4 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +123,7 @@
 				8E60A21528A638E6002139E4 /* MemorizeSentencesTests */,
 				8E60A21F28A638E6002139E4 /* MemorizeSentencesUITests */,
 				8E60A1FD28A638E4002139E4 /* Products */,
+				8E60A23F28A689BF002139E4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +140,7 @@
 		8E60A1FE28A638E4002139E4 /* MemorizeSentences */ = {
 			isa = PBXGroup;
 			children = (
+				8E60A25328A68AB8002139E4 /* sentences.sqlite */,
 				8E60A1FF28A638E4002139E4 /* AppDelegate.swift */,
 				8E60A20128A638E4002139E4 /* SceneDelegate.swift */,
 				8E60A20328A638E4002139E4 /* ViewController.swift */,
@@ -106,6 +148,27 @@
 				8E60A20828A638E6002139E4 /* Assets.xcassets */,
 				8E60A20A28A638E6002139E4 /* LaunchScreen.storyboard */,
 				8E60A20D28A638E6002139E4 /* Info.plist */,
+				8E60A22F28A63D48002139E4 /* CumleHucreTableViewCell.swift */,
+				8E60A23128A63E53002139E4 /* CumleListeViewController.swift */,
+				8E60A23328A64870002139E4 /* CumleEkleViewController.swift */,
+				8E60A23528A64899002139E4 /* CumleGuncelleViewController.swift */,
+				8E60A23728A648C1002139E4 /* CumleDetayViewController.swift */,
+				8E60A23B28A68864002139E4 /* Sentence.swift */,
+				8E60A23D28A6897D002139E4 /* Sentencesdao.swift */,
+				8EFBB18528AA20BE00DE688C /* UnMemorisedSentencesViewController.swift */,
+				8EFBB18928AA622000DE688C /* MemorisedSentencesViewController.swift */,
+				8E60A24A28A68A51002139E4 /* FMDatabase.h */,
+				8E60A24C28A68A51002139E4 /* FMDatabase.m */,
+				8E60A24928A68A51002139E4 /* FMDatabaseAdditions.h */,
+				8E60A24328A68A51002139E4 /* FMDatabaseAdditions.m */,
+				8E60A24728A68A51002139E4 /* FMDatabasePool.h */,
+				8E60A24D28A68A51002139E4 /* FMDatabasePool.m */,
+				8E60A24B28A68A51002139E4 /* FMDatabaseQueue.h */,
+				8E60A24428A68A51002139E4 /* FMDatabaseQueue.m */,
+				8E60A24828A68A51002139E4 /* FMDB.h */,
+				8E60A24628A68A51002139E4 /* FMResultSet.h */,
+				8E60A24528A68A51002139E4 /* FMResultSet.m */,
+				8E60A24228A68A50002139E4 /* MemorizeSentences-Bridging-Header.h */,
 			);
 			path = MemorizeSentences;
 			sourceTree = "<group>";
@@ -125,6 +188,14 @@
 				8E60A22228A638E6002139E4 /* MemorizeSentencesUITestsLaunchTests.swift */,
 			);
 			path = MemorizeSentencesUITests;
+			sourceTree = "<group>";
+		};
+		8E60A23F28A689BF002139E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8E60A24028A689BF002139E4 /* libsqlite3.tbd */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +266,7 @@
 				TargetAttributes = {
 					8E60A1FB28A638E4002139E4 = {
 						CreatedOnToolsVersion = 13.4.1;
+						LastSwiftMigration = 1340;
 					};
 					8E60A21128A638E6002139E4 = {
 						CreatedOnToolsVersion = 13.4.1;
@@ -231,6 +303,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E60A25428A68AB8002139E4 /* sentences.sqlite in Resources */,
 				8E60A20C28A638E6002139E4 /* LaunchScreen.storyboard in Resources */,
 				8E60A20928A638E6002139E4 /* Assets.xcassets in Resources */,
 				8E60A20728A638E4002139E4 /* Main.storyboard in Resources */,
@@ -258,8 +331,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8E60A23228A63E53002139E4 /* CumleListeViewController.swift in Sources */,
+				8E60A23C28A68864002139E4 /* Sentence.swift in Sources */,
+				8EFBB18628AA20BE00DE688C /* UnMemorisedSentencesViewController.swift in Sources */,
+				8E60A23028A63D48002139E4 /* CumleHucreTableViewCell.swift in Sources */,
+				8E60A25128A68A51002139E4 /* FMDatabase.m in Sources */,
 				8E60A20428A638E4002139E4 /* ViewController.swift in Sources */,
+				8E60A23628A64899002139E4 /* CumleGuncelleViewController.swift in Sources */,
+				8E60A24F28A68A51002139E4 /* FMDatabaseQueue.m in Sources */,
+				8EFBB18A28AA622000DE688C /* MemorisedSentencesViewController.swift in Sources */,
+				8E60A25228A68A51002139E4 /* FMDatabasePool.m in Sources */,
+				8E60A25028A68A51002139E4 /* FMResultSet.m in Sources */,
+				8E60A23E28A6897E002139E4 /* Sentencesdao.swift in Sources */,
 				8E60A20028A638E4002139E4 /* AppDelegate.swift in Sources */,
+				8E60A24E28A68A51002139E4 /* FMDatabaseAdditions.m in Sources */,
+				8E60A23828A648C1002139E4 /* CumleDetayViewController.swift in Sources */,
+				8E60A23428A64870002139E4 /* CumleEkleViewController.swift in Sources */,
 				8E60A20228A638E4002139E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -435,8 +522,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3433S829U5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemorizeSentences/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -452,6 +541,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yusuffproduction.MemorizeSentences;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MemorizeSentences/MemorizeSentences-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -462,8 +553,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 3433S829U5;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = MemorizeSentences/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -479,6 +572,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.yusuffproduction.MemorizeSentences;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "MemorizeSentences/MemorizeSentences-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
