@@ -8,22 +8,22 @@
 import UIKit
 
 class CumleDetayViewController: UIViewController {
-
+    @IBOutlet weak var sentenceEnglish: UILabel!
+    @IBOutlet weak var sentenceGerman: UILabel!
+    @IBOutlet weak var sentenceGermanV2: UILabel!
+    @IBOutlet weak var sentenceTurkish: UILabel!
+    
+    var sentence: Sentence?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        if let s = sentence {
+            sentenceTurkish.text = s.sentence_turkish
+            sentenceEnglish.text = s.sentence_english
+            sentenceGerman.text = s.sentence_german
+            sentenceGermanV2.text = s.sentence_germanv2
+        }
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

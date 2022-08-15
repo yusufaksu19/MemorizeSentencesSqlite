@@ -25,7 +25,16 @@ class CumleGuncelleViewController: UIViewController {
             sentenceGerman.text = s.sentence_german
             sentenceGermanV2.text = s.sentence_germanv2
         }
+        
+        self.sentenceTurkish.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))
+        self.sentenceEnglish.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))
+        self.sentenceGerman.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))
+        self.sentenceGermanV2.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))
 
+    }
+    
+    @objc func tapDone(sender: Any) {
+        self.view.endEditing(true)
     }
     
     @IBAction func update(_ sender: Any) {
@@ -39,3 +48,5 @@ class CumleGuncelleViewController: UIViewController {
     }
     
 }
+
+
