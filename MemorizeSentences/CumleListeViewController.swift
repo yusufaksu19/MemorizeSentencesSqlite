@@ -86,9 +86,11 @@ extension CumleListeViewController: UITableViewDelegate, UITableViewDataSource {
         
         if (sentence.is_memorised == 1) {
             cell.backgroundColor = UIColor.green
+            cell.sentenceTurkishLabel.textColor = UIColor.black
             
         } else {
             cell.backgroundColor = UIColor.red
+            cell.sentenceTurkishLabel.textColor = UIColor.white
         }
        
         
