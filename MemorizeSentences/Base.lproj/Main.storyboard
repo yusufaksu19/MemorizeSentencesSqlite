@@ -241,8 +241,8 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="deneme" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Pud-1O-iRQ">
                                                     <rect key="frame" x="20" y="20" width="374" height="70"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -534,6 +534,7 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add Sentence" id="6zR-2S-0VT"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
                     <connections>
                         <outlet property="sentenceEnglish" destination="hiZ-Xe-khS" id="6JW-kd-raD"/>
                         <outlet property="sentenceGerman" destination="v7L-JH-h7d" id="mIi-iW-DRk"/>

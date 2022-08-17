@@ -25,14 +25,22 @@ class CumleListeViewController: UIViewController {
         cumlelerTableView.dataSource = self
         
         searchBar.delegate = self
+        
+        self.searchBar.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))
+    }
+    
+    @objc func tapDone(sender: Any) {
+        self.view.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {
         
         if self.isSearching {
             sentencesList = Sentencesdao().search(sentence_turkish: self.searchText!)
+            sentencesList.reverse()
         } else {
             sentencesList = Sentencesdao().getAllSentences()
+            sentencesList.reverse()
         }
         cumlelerTableView.reloadData()
 
