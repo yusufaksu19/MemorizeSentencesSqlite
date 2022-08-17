@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CumleGuncelleViewController: UIViewController {
+class CumleGuncelleViewController: UIViewController, UITextViewDelegate  {
 
     @IBOutlet weak var sentenceEnglish: UITextView!
     @IBOutlet weak var sentenceGerman: UITextView!
@@ -30,7 +30,42 @@ class CumleGuncelleViewController: UIViewController {
         self.sentenceEnglish.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))
         self.sentenceGerman.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))
         self.sentenceGermanV2.addDoneButton(title: "Done", target: self, selector: #selector(tapDone(sender:)))
+        
+        sentenceTurkish.delegate = self
 
+    }
+    
+    func textViewShouldBeginEditing(_ textView: UITextView) -> Bool {
+         
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillShow), name: UIResponder.keyboardWillShowNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(keyboardWillHide), name: UIResponder.keyboardWillHideNotification, object: nil)
+      
+        
+        return true
+    }
+    
+    func textViewDidEndEditing(_ textView: UITextView) {
+        
+        
+        NotificationCenter.default.removeObserver(self)
+        
+    }
+    
+   
+
+    @objc func keyboardWillShow(notification: NSNotification) {
+        
+        if let keyboardSize = (notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? NSValue)?.cgRectValue {
+            if self.view.frame.origin.y == 0  {
+                self.view.frame.origin.y -= keyboardSize.height
+            }
+        }
+    }
+
+    @objc func keyboardWillHide(notification: NSNotification) {
+        if self.view.frame.origin.y != 30{
+            self.view.frame.origin.y = 0
+        }
     }
     
     @objc func tapDone(sender: Any) {

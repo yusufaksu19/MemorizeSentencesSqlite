@@ -122,6 +122,14 @@ class UnMemorisedSentencesViewController: UIViewController {
         sentenceGermanV2.isHidden = false
 
     }
+    
+    func makeEditableFalse(){
+        sentenceEnglish.text = ""
+        sentenceGerman.text = ""
+        sentenceGermanV2.text = ""
+        sentenceTurkish.text = ""
+        
+    }
 
     
 }

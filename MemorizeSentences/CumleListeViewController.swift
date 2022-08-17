@@ -101,22 +101,13 @@ extension CumleListeViewController: UITableViewDelegate, UITableViewDataSource {
         self.performSegue(withIdentifier: "toDetay", sender: indexPath.row)
     }
     
-//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-//
-//        let silAction = UITableViewRowAction(style: .default, title: "Delete", handler: {(action: UITableViewRowAction, indexPath: IndexPath) -> Void in print("Sil Tıklandı\(self.liste[indexPath.row])") })
-//
-//        let guncelleAction = UITableViewRowAction(style: .normal, title: "Update", handler: {(action: UITableViewRowAction, indexPath: IndexPath) -> Void in print("Güncelle Tıklandı\(self.liste[indexPath.row])")
-//
-//            self.performSegue(withIdentifier: "toGuncelle", sender: indexPath.row )
-//        })
-//
-//        return [silAction, guncelleAction]
-//
-//    }
+
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
         
         let silAction = UIContextualAction(style: .destructive, title: "Delete", handler: {(contextualAction, view, boolValue) in
+            
+            
             
             let sentence = self.sentencesList[indexPath.row]
             
@@ -124,9 +115,12 @@ extension CumleListeViewController: UITableViewDelegate, UITableViewDataSource {
             
             if self.isSearching {
                 self.sentencesList = Sentencesdao().search(sentence_turkish: self.searchText!)
+                self.sentencesList.reverse()
             } else {
                 self.sentencesList = Sentencesdao().getAllSentences()
+                self.sentencesList.reverse()
             }
+            
             
             self.cumlelerTableView.reloadData()
             
@@ -136,6 +130,8 @@ extension CumleListeViewController: UITableViewDelegate, UITableViewDataSource {
             
             self.performSegue(withIdentifier: "toGuncelle", sender: indexPath.row)
         })
+        silAction.backgroundColor = UIColor.black
+        guncelleAction.backgroundColor = UIColor.systemOrange
         
         return UISwipeActionsConfiguration(actions: [silAction, guncelleAction])
         
@@ -156,9 +152,38 @@ extension CumleListeViewController: UISearchBarDelegate {
         }
         
         sentencesList = Sentencesdao().search(sentence_turkish: self.searchText!)
+        sentencesList.reverse()
         
         cumlelerTableView.reloadData()
         
     }
     
 }
+
+extension UISearchBar {
+    
+    func addDoneButton(title: String, target: Any, selector: Selector) {
+        
+        let toolBar = UIToolbar(frame: CGRect(x: 0.0,
+                                              y: 0.0,
+                                              width: UIScreen.main.bounds.size.width,
+                                              height: 44.0))//1
+        let flexible = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)//2
+        let barButton = UIBarButtonItem(title: title, style: .plain, target: target, action: selector)//3
+        toolBar.setItems([flexible, barButton], animated: false)//4
+        self.inputAccessoryView = toolBar//5
+    }
+}
+
+//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+//
+//        let silAction = UITableViewRowAction(style: .default, title: "Delete", handler: {(action: UITableViewRowAction, indexPath: IndexPath) -> Void in print("Sil Tıklandı\(self.liste[indexPath.row])") })
+//
+//        let guncelleAction = UITableViewRowAction(style: .normal, title: "Update", handler: {(action: UITableViewRowAction, indexPath: IndexPath) -> Void in print("Güncelle Tıklandı\(self.liste[indexPath.row])")
+//
+//            self.performSegue(withIdentifier: "toGuncelle", sender: indexPath.row )
+//        })
+//
+//        return [silAction, guncelleAction]
+//
+//    }
