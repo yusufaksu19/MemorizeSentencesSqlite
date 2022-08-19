@@ -13,7 +13,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         
         veritabaniKopyala()
-        
+
     }
     
     func veritabaniKopyala(){

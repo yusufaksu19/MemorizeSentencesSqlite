@@ -9,6 +9,7 @@ import UIKit
 
 class CumleListeViewController: UIViewController {
 
+    @IBOutlet weak var titleBar: UINavigationItem!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var cumlelerTableView: UITableView!
     
@@ -19,6 +20,7 @@ class CumleListeViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         
         
         cumlelerTableView.delegate = self
@@ -42,6 +44,7 @@ class CumleListeViewController: UIViewController {
             sentencesList = Sentencesdao().getAllSentences()
             sentencesList.reverse()
         }
+        titleBar.title = "Sentences: \(sentencesList.count)"
         cumlelerTableView.reloadData()
 
    
@@ -85,8 +88,27 @@ extension CumleListeViewController: UITableViewDelegate, UITableViewDataSource {
         cell.sentenceTurkishLabel.text = sentence.sentence_turkish
         
         if (sentence.is_memorised == 1) {
-            cell.backgroundColor = UIColor.green
-            cell.sentenceTurkishLabel.textColor = UIColor.black
+            let stars = sentence.stars!
+            if(stars < 5) {
+                cell.backgroundColor = UIColor.lightGray
+                cell.sentenceTurkishLabel.textColor = UIColor.black
+            }
+            else if (stars >= 5 && stars < 10 ){
+                cell.backgroundColor = UIColor.yellow
+                cell.sentenceTurkishLabel.textColor = UIColor.blue
+            }
+            else if (stars >= 10 && stars < 15 ){
+                cell.backgroundColor = UIColor.orange
+                cell.sentenceTurkishLabel.textColor = UIColor.white
+            }
+            else if (stars >= 15 && stars < 20 ){
+                cell.backgroundColor = UIColor.systemGreen
+                cell.sentenceTurkishLabel.textColor = UIColor.black
+            }
+            else if (stars >= 20 ){
+                cell.backgroundColor = UIColor.purple
+                cell.sentenceTurkishLabel.textColor = UIColor.white
+            }
             
         } else {
             cell.backgroundColor = UIColor.red
@@ -141,7 +163,6 @@ extension CumleListeViewController: UITableViewDelegate, UITableViewDataSource {
 extension CumleListeViewController: UISearchBarDelegate {
     
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
-        print("Arama sonuç: \(searchText)")
         
         self.searchText = searchText
         
@@ -175,15 +196,3 @@ extension UISearchBar {
     }
 }
 
-//    func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-//
-//        let silAction = UITableViewRowAction(style: .default, title: "Delete", handler: {(action: UITableViewRowAction, indexPath: IndexPath) -> Void in print("Sil Tıklandı\(self.liste[indexPath.row])") })
-//
-//        let guncelleAction = UITableViewRowAction(style: .normal, title: "Update", handler: {(action: UITableViewRowAction, indexPath: IndexPath) -> Void in print("Güncelle Tıklandı\(self.liste[indexPath.row])")
-//
-//            self.performSegue(withIdentifier: "toGuncelle", sender: indexPath.row )
-//        })
-//
-//        return [silAction, guncelleAction]
-//
-//    }

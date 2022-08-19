@@ -1,13 +1,13 @@
 //
-//  MemorisedSentencesViewController.swift
+//  FiveStarsViewController.swift
 //  MemorizeSentences
 //
-//  Created by Yusuf Aksu on 15.08.2022.
+//  Created by Yusuf Aksu on 19.08.2022.
 //
 
 import UIKit
 
-class MemorisedSentencesViewController: UIViewController {
+class FiveStarsViewController: UIViewController {
     @IBOutlet weak var sentenceEnglish: UITextView!
     @IBOutlet weak var sentenceGerman: UITextView!
     @IBOutlet weak var sentenceGermanV2: UITextView!
@@ -16,14 +16,12 @@ class MemorisedSentencesViewController: UIViewController {
     
     var sentencesList = [Sentence]()
     var sentencesNumber = 0
-    
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        sentencesList = Sentencesdao().getMemorisedSentences().shuffled()
-        
-
+        sentencesList = Sentencesdao().getFiveStarsMemorisedSentences().shuffled()
         
         if (sentencesList.isEmpty){
             
@@ -45,29 +43,6 @@ class MemorisedSentencesViewController: UIViewController {
             titleBar.title = "Total Memorised: \(sentencesList.count) --> \(sentencesList[sentencesNumber].stars!)"
         }
 
-        
-        
-    }
-    
-    @IBAction func nextButton(_ sender: Any) {
-        
-        if (sentencesNumber < self.sentencesList.count - 1){
-            
-            hideSentences()
-           
-            sentencesNumber += 1
-            
-            
-            sentenceEnglish.text = sentencesList[sentencesNumber].sentence_english
-            sentenceGerman.text = sentencesList[sentencesNumber].sentence_german
-            sentenceGermanV2.text = sentencesList[sentencesNumber].sentence_germanv2
-            sentenceTurkish.text = sentencesList[sentencesNumber].sentence_turkish
-            
-            
-            titleBar.title = "Total Memorised: \(sentencesList.count) --> \(sentencesList[sentencesNumber].stars!)"
-        }
-
-        
     }
     
     @IBAction func backButton(_ sender: Any) {
@@ -101,11 +76,44 @@ class MemorisedSentencesViewController: UIViewController {
         }
         
         titleBar.title = "Total: \(sentencesList.count)"
+        
     }
     
-    @IBAction func showSentencesButton(_ sender: Any) {
+    @IBAction func nextButton(_ sender: Any) {
+        
+        if (sentencesNumber < self.sentencesList.count - 1){
+            
+            hideSentences()
+           
+            sentencesNumber += 1
+            
+            
+            sentenceEnglish.text = sentencesList[sentencesNumber].sentence_english
+            sentenceGerman.text = sentencesList[sentencesNumber].sentence_german
+            sentenceGermanV2.text = sentencesList[sentencesNumber].sentence_germanv2
+            sentenceTurkish.text = sentencesList[sentencesNumber].sentence_turkish
+            
+            
+            titleBar.title = "Total Memorised: \(sentencesList.count) --> \(sentencesList[sentencesNumber].stars!)"
+        }
+
+        
+    }
+    @IBAction func giveAStar(_ sender: Any) {
+        
+        Sentencesdao().giveAStar(sentence_id: sentencesList[sentencesNumber].sentence_id!)
+        
+        sentencesList[sentencesNumber].stars! += 1
+        
+        titleBar.title = "Total Memorised: \(sentencesList.count) --> \(sentencesList[sentencesNumber].stars!)"
+
+    }
+    
+    
+    @IBAction func showButton(_ sender: Any) {
         showSentences()
     }
+    
     
     func hideSentences(){
         
@@ -123,12 +131,4 @@ class MemorisedSentencesViewController: UIViewController {
 
     }
 
-    @IBAction func giveAStar(_ sender: Any) {
-        Sentencesdao().giveAStar(sentence_id: sentencesList[sentencesNumber].sentence_id!)
-        
-        sentencesList[sentencesNumber].stars! += 1
-        
-        titleBar.title = "Total Memorised: \(sentencesList.count) --> \(sentencesList[sentencesNumber].stars!)"
-    }
-    
 }

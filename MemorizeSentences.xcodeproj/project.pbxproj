@@ -30,6 +30,10 @@
 		8E60A25128A68A51002139E4 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A24C28A68A51002139E4 /* FMDatabase.m */; };
 		8E60A25228A68A51002139E4 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 8E60A24D28A68A51002139E4 /* FMDatabasePool.m */; };
 		8E60A25428A68AB8002139E4 /* sentences.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 8E60A25328A68AB8002139E4 /* sentences.sqlite */; };
+		8EEEAE5328AF64DF00BD84E0 /* FiveStarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEAE5228AF64DF00BD84E0 /* FiveStarsViewController.swift */; };
+		8EEEAE5528AF64F600BD84E0 /* TenStarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEAE5428AF64F600BD84E0 /* TenStarsViewController.swift */; };
+		8EEEAE5728AF652500BD84E0 /* FifteenStarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEAE5628AF652500BD84E0 /* FifteenStarsViewController.swift */; };
+		8EEEAE5928AF653300BD84E0 /* TwentyStarsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EEEAE5828AF653300BD84E0 /* TwentyStarsViewController.swift */; };
 		8EFBB18628AA20BE00DE688C /* UnMemorisedSentencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB18528AA20BE00DE688C /* UnMemorisedSentencesViewController.swift */; };
 		8EFBB18A28AA622000DE688C /* MemorisedSentencesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFBB18928AA622000DE688C /* MemorisedSentencesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -86,6 +90,10 @@
 		8E60A24C28A68A51002139E4 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
 		8E60A24D28A68A51002139E4 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
 		8E60A25328A68AB8002139E4 /* sentences.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = sentences.sqlite; sourceTree = "<group>"; };
+		8EEEAE5228AF64DF00BD84E0 /* FiveStarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiveStarsViewController.swift; sourceTree = "<group>"; };
+		8EEEAE5428AF64F600BD84E0 /* TenStarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TenStarsViewController.swift; sourceTree = "<group>"; };
+		8EEEAE5628AF652500BD84E0 /* FifteenStarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FifteenStarsViewController.swift; sourceTree = "<group>"; };
+		8EEEAE5828AF653300BD84E0 /* TwentyStarsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TwentyStarsViewController.swift; sourceTree = "<group>"; };
 		8EFBB18528AA20BE00DE688C /* UnMemorisedSentencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnMemorisedSentencesViewController.swift; sourceTree = "<group>"; };
 		8EFBB18928AA622000DE688C /* MemorisedSentencesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemorisedSentencesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -145,6 +153,10 @@
 				8E60A20128A638E4002139E4 /* SceneDelegate.swift */,
 				8E60A20328A638E4002139E4 /* ViewController.swift */,
 				8E60A20528A638E4002139E4 /* Main.storyboard */,
+				8EEEAE5228AF64DF00BD84E0 /* FiveStarsViewController.swift */,
+				8EEEAE5428AF64F600BD84E0 /* TenStarsViewController.swift */,
+				8EEEAE5628AF652500BD84E0 /* FifteenStarsViewController.swift */,
+				8EEEAE5828AF653300BD84E0 /* TwentyStarsViewController.swift */,
 				8E60A20828A638E6002139E4 /* Assets.xcassets */,
 				8E60A20A28A638E6002139E4 /* LaunchScreen.storyboard */,
 				8E60A20D28A638E6002139E4 /* Info.plist */,
@@ -331,12 +343,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EEEAE5728AF652500BD84E0 /* FifteenStarsViewController.swift in Sources */,
 				8E60A23228A63E53002139E4 /* CumleListeViewController.swift in Sources */,
 				8E60A23C28A68864002139E4 /* Sentence.swift in Sources */,
 				8EFBB18628AA20BE00DE688C /* UnMemorisedSentencesViewController.swift in Sources */,
 				8E60A23028A63D48002139E4 /* CumleHucreTableViewCell.swift in Sources */,
 				8E60A25128A68A51002139E4 /* FMDatabase.m in Sources */,
 				8E60A20428A638E4002139E4 /* ViewController.swift in Sources */,
+				8EEEAE5928AF653300BD84E0 /* TwentyStarsViewController.swift in Sources */,
+				8EEEAE5528AF64F600BD84E0 /* TenStarsViewController.swift in Sources */,
 				8E60A23628A64899002139E4 /* CumleGuncelleViewController.swift in Sources */,
 				8E60A24F28A68A51002139E4 /* FMDatabaseQueue.m in Sources */,
 				8EFBB18A28AA622000DE688C /* MemorisedSentencesViewController.swift in Sources */,
@@ -347,6 +362,7 @@
 				8E60A24E28A68A51002139E4 /* FMDatabaseAdditions.m in Sources */,
 				8E60A23828A648C1002139E4 /* CumleDetayViewController.swift in Sources */,
 				8E60A23428A64870002139E4 /* CumleEkleViewController.swift in Sources */,
+				8EEEAE5328AF64DF00BD84E0 /* FiveStarsViewController.swift in Sources */,
 				8E60A20228A638E4002139E4 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
