@@ -13,6 +13,7 @@ class CumleEkleViewController: UIViewController, UITextViewDelegate {
     @IBOutlet weak var sentenceGerman: UITextView!
     @IBOutlet weak var sentenceGermanV2: UITextView!
     @IBOutlet weak var sentenceTurkish: UITextView!
+    @IBOutlet weak var titleBar: UINavigationItem!
     
     
     override func viewDidLoad() {
@@ -72,6 +73,7 @@ class CumleEkleViewController: UIViewController, UITextViewDelegate {
             
             Sentencesdao().addSentence(sentence_turkish: sentenceTurkish, sentence_english: sentenceEnglish, sentence_german: sentenceGerman, sentence_germanv2: sentenceGermanV2)
             
+            titleBar.title = "ADDED"
         }
         
     }

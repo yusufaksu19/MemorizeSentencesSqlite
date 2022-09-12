@@ -13,6 +13,7 @@ class CumleGuncelleViewController: UIViewController, UITextViewDelegate  {
     @IBOutlet weak var sentenceGerman: UITextView!
     @IBOutlet weak var sentenceGermanV2: UITextView!
     @IBOutlet weak var sentenceTurkish: UITextView!
+    @IBOutlet weak var titleBar: UINavigationItem!
     
     var sentence:Sentence?
     
@@ -77,6 +78,8 @@ class CumleGuncelleViewController: UIViewController, UITextViewDelegate  {
         if let s = sentence, let sentenceTurkish = sentenceTurkish.text, let sentenceEnglish = sentenceEnglish.text, let sentenceGerman = sentenceGerman.text, let sentenceGermanV2 = sentenceGermanV2.text {
             
             Sentencesdao().updateSentence(sentence_id: s.sentence_id!, sentence_turkish: sentenceTurkish, sentence_english: sentenceEnglish, sentence_german: sentenceGerman, sentence_germanv2: sentenceGermanV2)
+            
+            titleBar.title = "UPDATED"
             
         }
         

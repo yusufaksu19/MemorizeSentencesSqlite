@@ -126,25 +126,36 @@ extension CumleListeViewController: UITableViewDelegate, UITableViewDataSource {
 
     
     func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
-        
+        let sentence = self.sentencesList[indexPath.row]
+
         let silAction = UIContextualAction(style: .destructive, title: "Delete", handler: {(contextualAction, view, boolValue) in
             
+            let alert = UIAlertController(title: "Delete Process", message: "Do you want to delete -> \(sentence.sentence_turkish!)", preferredStyle: .alert)
             
-            
-            let sentence = self.sentencesList[indexPath.row]
-            
-            Sentencesdao().deleteSentence(sentence_id: sentence.sentence_id!)
-            
-            if self.isSearching {
-                self.sentencesList = Sentencesdao().search(sentence_turkish: self.searchText!)
-                self.sentencesList.reverse()
-            } else {
-                self.sentencesList = Sentencesdao().getAllSentences()
-                self.sentencesList.reverse()
+            let cancelAction = UIAlertAction(title: "Cancel", style: .cancel){ action in
+                
+            }
+            let yesAction = UIAlertAction(title: "Yes", style: .destructive){ action in
+                Sentencesdao().deleteSentence(sentence_id: sentence.sentence_id!)
+                if self.isSearching {
+                    self.sentencesList = Sentencesdao().search(sentence_turkish: self.searchText!)
+                    self.sentencesList.reverse()
+                } else {
+                    self.sentencesList = Sentencesdao().getAllSentences()
+                    self.sentencesList.reverse()
+                }
+                
+                
+                self.cumlelerTableView.reloadData()
             }
             
+            alert.addAction(cancelAction)
+            alert.addAction(yesAction)
+            self.present(alert, animated: false)
             
-            self.cumlelerTableView.reloadData()
+            
+            
+         
             
         })
         
